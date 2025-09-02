@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "GithubEventsApp"
 include(":app")
- 
+include(":core")
