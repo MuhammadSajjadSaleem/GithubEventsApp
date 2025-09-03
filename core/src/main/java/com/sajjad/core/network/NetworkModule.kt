@@ -1,5 +1,6 @@
 package com.sajjad.core.network
 
+import com.sajjad.core.BuildConfig
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
@@ -26,8 +27,15 @@ object NetworkModule {
         }
         return OkHttpClient.Builder()
             .addInterceptor(logging)
+            .addInterceptor { chain ->
+                val request = chain.request().newBuilder()
+                 //   .addHeader("Authorization", "token ${BuildConfig.GITHUB_TOKEN}")
+                    .build()
+                chain.proceed(request)
+            }
             .build()
     }
+
 
     @Provides
     @Singleton
