@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "GithubEventsApp"
 include(":app")
 include(":core")
+include(":feature-events")
+include(":feature-events-data")
