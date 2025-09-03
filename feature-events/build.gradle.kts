@@ -64,4 +64,12 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.androidx.lifecycle.runtime.compose)
 
+    // Testing
+    testImplementation(libs.junit)
+    testImplementation(libs.kotlin.test)
+    testImplementation(libs.kotlin.test.junit)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.coroutines.test)
+
 }
