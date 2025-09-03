@@ -6,8 +6,8 @@ plugins {
 }
 
 android {
-    namespace = "com.sajjad.core"
-    compileSdk = 36
+    namespace = "com.sajjad.feature_events_data"
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 24
@@ -26,9 +26,7 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    implementation(project(":core"))
 
     // Retrofit + Moshi
     implementation(libs.retrofit)
@@ -38,6 +36,7 @@ dependencies {
     ksp(libs.moshi.kotlin.codegen)
 
     // OkHttp
+    implementation(libs.okhttp)
     implementation(libs.okhttp.logging)
 
     // Hilt
