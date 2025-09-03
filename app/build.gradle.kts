@@ -16,7 +16,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.sajjad.githubeventsapp.common.HiltTestRunner"
     }
 
     buildTypes {
@@ -78,4 +78,22 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // UI / Integration Testing
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    debugImplementation(libs.androidx.ui.test.manifest)
+
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.androidx.test.espresso.core)
+
+    // Hilt Testing
+    androidTestImplementation(libs.hilt.android.testing)
+    kspAndroidTest(libs.hilt.android.compiler)
+
+    // Networking (for instrumentation tests)
+    androidTestImplementation(project(":core"))          // so tests see ApiService + network setup
+    androidTestImplementation(libs.retrofit)
+    androidTestImplementation(libs.retrofit.moshi)
+    androidTestImplementation(libs.okhttp)
+    androidTestImplementation(libs.mockwebserver)
 }

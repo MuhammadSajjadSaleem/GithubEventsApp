@@ -15,6 +15,7 @@ composeBom = "2024.04.00"
 composeNavigation = "2.5.3"
 hilt_version = "2.47"
 ksp = "1.9.10-1.0.13"
+mockwebserver = "4.12.0"
 runtimeAndroid = "1.7.8"
 storage = "1.5.0"
 lifecycle_viewmodel = "2.5.1"
@@ -26,6 +27,14 @@ okhttp = "4.12.0"
 coroutines = "1.7.3"
 mockk = "1.13.11"
 truth = "1.1.5"
+mockito = "5.12.0"
+mockitoKotlin = "5.3.1"
+coroutinesTest = "1.8.1"
+kotlinTest = "1.9.0"
+androidx-compose-ui-test = "1.6.8"
+junit-ext = "1.1.5"
+espresso = "3.5.1"
+uiTestManifest = "1.6.8"
 
 [libraries]
 # AndroidX Core
@@ -33,6 +42,7 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycleRuntimeCompose" }
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
+androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "uiTestManifest" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
@@ -52,8 +62,11 @@ androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navig
 # Hilt
 dagger_hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt_version" }
 dagger_hilt_compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt_version" }
+hilt-android-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt_version" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt_version" }
 
 # Moshi
+mockwebserver = { module = "com.squareup.okhttp3:mockwebserver", version.ref = "mockwebserver" }
 moshi = { group = "com.squareup.moshi", name = "moshi", version.ref = "moshi" }
 moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
 moshi-kotlin-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshi" }
@@ -70,13 +83,26 @@ okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor",
 coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 
+androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4", version.ref = "androidx-compose-ui-test" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junit-ext" }
+androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+
 # Testing
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlinTest" }
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlinTest" }
 
+# Mockito
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockito" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
+
+# Coroutines test
+coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
