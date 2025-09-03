@@ -49,7 +49,6 @@ android {
 dependencies {
     implementation(project(":core"))
     implementation(project(":feature-events"))
-    implementation(project(":feature-events-data"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -73,6 +72,7 @@ dependencies {
     implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.compose.navigation)
+    implementation(libs.androidx.lifecycle.runtime.compose)
 
     // Testing
     testImplementation(libs.junit)

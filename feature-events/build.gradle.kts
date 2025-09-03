@@ -35,22 +35,33 @@ android {
 
 dependencies {
     implementation(project(":core"))
-    implementation(project(":feature-events-data"))
-    // Compose
-    implementation(libs.coil.compose)
-    implementation(libs.androidx.material.icons.extended)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.compose.ui)
-    implementation(libs.androidx.material3.android)
-    implementation(libs.androidx.compose.foundation)
-    implementation(libs.androidx.compose.runtime)
-    implementation(libs.androidx.compose.navigation)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.moshi)
+    implementation(libs.moshi)
+    implementation(libs.moshi.kotlin)
+    ksp(libs.moshi.kotlin.codegen)
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
 
     // Hilt
     implementation(libs.dagger.hilt)
     implementation(libs.androidx.hilt.navigation.compose)
     ksp(libs.dagger.hilt.compiler)
 
-    // ViewModel
-    implementation(libs.lifecycle.viewmodel)
+    // Coroutines
+    implementation(libs.coroutines.core)
+    implementation(libs.coroutines.android)
+
+    // Compose
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.foundation)
+    implementation(libs.androidx.compose.runtime)
+    implementation(libs.androidx.compose.navigation)
+    implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.material.icons.extended)
+    implementation(libs.coil.compose)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+
 }
