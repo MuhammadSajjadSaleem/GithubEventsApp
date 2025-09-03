@@ -29,7 +29,7 @@ abstract class BaseUiTest {
     @Before
     open fun setUp() {
         hiltRule.inject()
-        mockWebServer.start()
+        mockWebServer.start(8080)
     }
 
     @After
