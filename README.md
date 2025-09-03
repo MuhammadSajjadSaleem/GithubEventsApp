@@ -6,8 +6,12 @@ It supports **integration testing with MockWebServer** to validate UI flows like
 ---
 
 ## 📽️ Demo Video
+
+https://github.com/user-attachments/assets/36a13a56-a5a2-4a0c-83f1-0798922dd46a
+
+
+
 Watch the demo here:  
-[Screen Recording 2025-09-03 at 3.20.39 PM.mov](../../Desktop/Screen%20Recording%202025-09-03%20at%203.20.39%E2%80%AFPM.mov)
 
 ---
 
@@ -34,8 +38,9 @@ Watch the demo here:
 - **Unit Tests**: cover core business logic (use cases, repositories)
 - **Integration Tests**: validate UI flow (list → detail) using **MockWebServer**
 - Example reports:
-  ![Unit Test Report](../../Desktop/Screenshot%202025-09-03%20at%203.35.38%E2%80%AFPM.png)  
-  ![Integration Test Report](../../Desktop/Screenshot%202025-09-03%20at%203.36.13%E2%80%AFPM.png)
+  <img width="929" height="442" alt="Screenshot 2025-09-03 at 3 35 38 PM" src="https://github.com/user-attachments/assets/c49520bb-1f00-40b4-94fe-89c8b4386dc8" />
+
+<img width="880" height="400" alt="Screenshot 2025-09-03 at 3 36 13 PM" src="https://github.com/user-attachments/assets/03fcdbfa-5aff-49df-af66-88b41707054a" />
 
 ---
 
