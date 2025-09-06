@@ -14,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.rememberAsyncImagePainter
@@ -82,7 +83,7 @@ fun EventsScreen(
                 ) {
                     items(items, key = { it.id }) { event ->
                         EventRow(event) { onEventClick(event.id) }
-                        Divider()
+                        HorizontalDivider()
                     }
                 }
 
@@ -118,5 +119,35 @@ private fun EventRow(event: Event, onClick: () -> Unit) {
             .fillMaxWidth()
             .clickable { onClick() }
     )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun EventsScreenPreview() {
+    val mockEvents = listOf(
+        Event(
+            id = "1",
+            type = "PushEvent",
+            actor = "sajjad-dev",
+            avatarUrl = "https://avatars.githubusercontent.com/u/1?v=4",
+            repoName = "sajjad/sample-repo",
+            createdAt = "2025-09-06T12:00:00Z"
+        ),
+        Event(
+            id = "2",
+            type = "IssueCommentEvent",
+            actor = "john-doe",
+            avatarUrl = "https://avatars.githubusercontent.com/u/2?v=4",
+            repoName = "johndoe/test-repo",
+            createdAt = "2025-09-05T15:30:00Z"
+        )
+    )
+
+    MaterialTheme {
+        EventsScreen(
+            state = Result.Success(mockEvents),
+            onEventClick = {}
+        )
+    }
 }
 
